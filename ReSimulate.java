@@ -7,7 +7,9 @@ public class ReSimulate{
 
     public static int trace[] = new int[Main.MAXN];
     public static boolean done= false;
-    public ReSimulate(){}
+    public ReSimulate(){
+        done= false;
+    }
 
     static void Reset()
     {

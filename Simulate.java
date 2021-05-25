@@ -10,7 +10,12 @@ public class Simulate{
     public static ArrayList<Integer> paths = new ArrayList<Integer>();
     public static ArrayList<Integer> Suggest = new ArrayList<Integer>();
 
-    public Simulate(){}
+    public Simulate(){
+        Path = new ArrayList<ArrayList<Integer>>();
+        Save = new ArrayList<Integer>();
+        paths = new ArrayList<Integer>();
+        Suggest = new ArrayList<Integer>();
+    }
 
     static void Reset()
     {
@@ -128,6 +133,10 @@ public class Simulate{
         {
             paths= Path.get(index);
             //if(Suggest.get(Suggest.size()- 1)!= paths.get(Save.size()))
+            if(paths.size()== Save.size()){
+                Main.CurrentNode= Main.end;
+                return;
+            }
             if(paths.get(Save.size())!= Pre)
             {
                 Suggest.add(paths.get(Save.size()));

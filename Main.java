@@ -9,12 +9,19 @@ public class Main {
     // private static Object point;
     static Point point[] = new Point[MAXN];
     static int NumberPath = 0;
-    static int CurrentNode = 1;
+    static int CurrentNode;
 
+    static void Reset()
+    {
+        Point point[] = new Point[MAXN];
+        NumberNode = 0;
+    }
 
     public static void main(String[] args) {
 
         //  Khởi tạo
+
+        Reset();
         for (int index = 1; index < MAXN; index++)
             point[index] = new Point();
 
@@ -31,16 +38,17 @@ public class Main {
         end= scanner.nextInt();
 
 
-        // Trường hợp có gợi ý
+        /// Trường hợp có gợi ý
         // Tìm đường đi với DFS
         Simulate simulate= new Simulate();
 
         simulate.FindAllPaths();
         // Gợi ý đường đi
         System.out.println("You now are in node " + start);
+        CurrentNode= start;
         while (true) {
             Simulate.OnTheWay();
-            if (CurrentNode == NumberNode)
+            if (CurrentNode == end)
                 break;
         }
 
