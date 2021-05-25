@@ -65,6 +65,7 @@ public class ReSimulate{
         deque.push(Main.start);
         trace[Main.start]= -1;
 
+        System.out.print("Đường đi ngắn nhất: ");
         while(!deque.isEmpty()){
             int u= deque.getFirst();
             deque.removeFirst();

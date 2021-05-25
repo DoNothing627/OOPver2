@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -20,8 +19,6 @@ public class ReadInput {
         Main.NumberNode = Math.max(Main.NumberNode, node);
         string = "";
         ++index;
-        // point[node]= new Point(node);
-        Main.point[node].list= new ArrayList();
 
         while (index <= s.length()) {
             if (index == s.length() || s.charAt(index) == ' ') {
