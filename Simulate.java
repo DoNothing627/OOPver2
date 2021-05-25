@@ -11,10 +11,10 @@ public class Simulate{
     public static ArrayList<Integer> Suggest = new ArrayList<Integer>();
 
     public Simulate(){
-        Path = new ArrayList<ArrayList<Integer>>();
-        Save = new ArrayList<Integer>();
-        paths = new ArrayList<Integer>();
-        Suggest = new ArrayList<Integer>();
+        Path.clear();
+        Save.clear();
+        paths.clear();
+        Suggest.clear();
     }
 
     static void Reset()
